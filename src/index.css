@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family:"Montserrat", sans-serif;;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  color: #333;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+  font-weight: 900;
+}
+
+.nav-link{
+  color: rgba(27, 27, 27, .9);
+  font-size: .925926vw;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+#nav-link-wrapper{
+  width: 35.7143vw;
+    height: 3.50529vw;
+    border: .0661376vw solid rgba(0, 0, 0, .13);
+    border-radius: 6.28307vw;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.32275vw;
+    padding-left: 2.71164vw;
+    padding-right: .529101vw;
+    display: flex;
+}
+
+@keyframes rotateCircle {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+/* Apply the rotation animation to the SVG */
+.rotating-svg {
+  animation: rotateCircle 5s linear infinite; /* 10 seconds for a full rotation */
+}
+
+.bg-gradient-image {
+  background-image:url("https://assets.website-files.com/62a4abb35d5fdf0ba6da53a8/62a4ac0342b260d93ca56471_Ellipse%2017%20(4).svg"), linear-gradient(rgba(241, 241, 252, 0.85), rgba(241, 241, 252, 0.85));
+  background-size: 80vw, auto;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: -20%, 30%, 0, 0;
+}
+
+.marquee {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.animate-marquee {
+  display: inline-flex;
+  animation: marquee 5s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-45%); }
+}
+
+@keyframes rotate-and-slide-on-load {
+  from {
+    transform: rotateX(70deg) translateX(20px); /* Start rotated and shifted slightly right */
+  }
+  to {
+    transform: rotateX(0deg) translateX(0); /* End at original position */
+  }
+}
+
+.animate-rotate-and-slide {
+  animation: rotate-and-slide-on-load 2s ease-out forwards;
+}
+#frame {
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+}
+
+#frame-content {
+  display: flex;
+  align-items: center; /* Ensure vertical centering */
+}
+
+.text-item {
+  height: 100vh;
+  flex-shrink: 0; /* Prevent items from resizing */
+}
+
